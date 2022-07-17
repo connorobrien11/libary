@@ -2,6 +2,7 @@ if not game:IsLoaded() then
     game.Loaded:Wait()
 end
 
+pcall(function()
 local Player = game:GetService("Players").LocalPlayer
 local Camera = game:GetService("Workspace").CurrentCamera
 local UserInputService = game:GetService("UserInputService")
@@ -136,4 +137,5 @@ UserInputService.InputBegan:Connect(function(Input, GP)
     if not GP and Input.KeyCode == Enum.KeyCode.Home then
         getgenv().useTeamColor = not getgenv().useTeamColor
     end
+end)
 end)
